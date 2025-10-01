@@ -1,0 +1,1 @@
+Ejemplo de pagina estatica usando html y css para Seminario PHP de Facultad de Informatica (UNLP)
