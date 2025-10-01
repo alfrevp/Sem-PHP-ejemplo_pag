@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL GAMES</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <h1 id="encabezado">
+        <img id="logo" src="img/loguito.jpg" alt="Logo de pagina"><span><u>Portal gameS</u></span>
+    </h1>
+
+    <nav>
+        <ul>
+            <li id="boton_inicio" onclick="window.location.href='index.html';">
+                <a href="index.html">INICIO</a>
+            </li>
+            <li id="buscador_juegos">
+                <form>
+                    <label for="nombre_juego">Buscar juego:</label>
+                    <input type="text" id="nombre_juego" name="nombre_juego" placeholder=" Nombre">&nbsp;&nbsp;
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero">
+                        <option value="">Todos</option>
+                        <option value="accion">Acción</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="aventura_grafica">Aventura Gráfica</option>
+                        <option value="carreras">Carreras</option>
+                        <option value="conduccion">Conducción</option>
+                        <option value="construccion_mazos">Construcción de Mazos</option>
+                        <option value="estrategia">Estrategia</option>
+                        <option value="fps">FPS</option>
+                        <option value="puzzles">Puzzles</option>
+                        <option value="rpg">RPG</option>
+                        <option value="survival_horror">Survival Horror</option>
+                        <option value="terror">Terror</option>
+                        <option value="terror_psicologico">Terror Psicológico</option>
+                    </select>&nbsp;&nbsp;
+                    <label for="plataforma">Plataforma:</label>
+                    <select id="plataforma" name="plataforma">
+                        <option value="">Todas</option>
+                        <option value="nintendo_switch">Nintendo Switch</option>
+                        <option value="pc">PC</option>
+                        <option value="ps4">PS4</option>
+                        <option value="ps5">PS5</option>
+                        <option value="xbox_one">Xbox One</option>
+                        <option value="xbox_series_xs">Xbox Series X/S</option>
+                    </select>&nbsp;&nbsp;
+                    <button id="boton_buscador" type="submit">Buscar</button>
+                </form>
+            </li>
+            <li id="boton_agregar" onclick="window.location.href='altaJuego.html';">
+                <a href="altaJuego.html">AGREGAR JUEGO</a>
+            </li>
+        </ul>
+    </nav> 
+
+    <div id="contenido">
+        <p id="titulo_agregar">Rellene los datos para agregar un nuevo juego:</p><hr/>             
+        <form id="formulario_agregar">
+            <ul>
+                <li>
+                    <label for="nombre"><b>Nombre del juego: </b></label>
+                    <input type="text" id="nombre" name="nombre">
+                </li><hr/>
+                <li>
+                    <label for="portada_juego"><b>Portada (relación aspecto 16/9): </b></label>
+                    <input type="file" id="portada_juego" name="portada_juego">
+                </li><hr/>
+                <li>
+                    <label id="area_descripcion" for="descripcion_juego"><b>Descripcion (máximo 255 caracteres): </b></label><br/>
+                    <textarea id="descripcion_juego" name="descripcion_juego"></textarea>
+                </li><hr/>
+                <li>
+                    <label><b>Plataforma/s: </b></label><br/>
+                    <input type="checkbox" id="pc" name="plataformas[]" value="PC">
+                    <label for="PC">PC</label>
+                    <input type="checkbox" id="ps4" name="plataformas[]" value="ps4">
+                    <label for="ps4">PS4</label>
+                    <input type="checkbox" id="ps5" name="plataformas[]" value="ps5">
+                    <label for="ps5">PS5</label>
+                    <input type="checkbox" id="xbox_one" name="plataformas[]" value="xbox_one">
+                    <label for="xbox_one">Xbox One</label>
+                    <input type="checkbox" id="xbox_xs" name="plataformas[]" value="xbox_xs">
+                    <label for="xbox_xs">Xbox Series X/S</label>
+                    <input type="checkbox" id="n_switch" name="plataformas[]" value="n_switch">
+                    <label for="n_switch">Nintendo Switch</label>
+                </li><hr/>
+                <li>
+                    <label for="url_juego"><b>URL del juego (máximo 80 caracteres): </b></label>
+                    <input type="text" id="url_juego" name="url_juego">
+                </li><hr/>
+                <li>
+                    <label><b>Género/s: </b></label><br/>
+                    <div class="checkboxes">
+                    <input type="checkbox" id="accion" name="generos[]" value="accion">
+                    <label for="accion">Acción</label>
+                    <input type="checkbox" id="aventura" name="generos[]" value="aventura">
+                    <label for="aventura">Aventura</label>
+                    <input type="checkbox" id="aventura_grafica" name="generos[]" value="aventura_grafica">
+                    <label for="aventura_grafica">Aventura Grafica</label>
+                    <input type="checkbox" id="carreras" name="generos[]" value="carreras">
+                    <label for="carreras">Carreras</label>
+                    <input type="checkbox" id="conduccion" name="generos[]" value="conduccion">
+                    <label for="conduccion">Conducción</label>
+                    <input type="checkbox" id="construccion_mazos" name="generos[]" value="construccion_mazos">
+                    <label for="construccion_mazos">Construcción de Mazos</label>
+                    <input type="checkbox" id="estrategia" name="generos[]" value="estrategia">
+                    <label for="estrategia">Estrategia</label>
+                    <input type="checkbox" id="fps" name="generos[]" value="fps">
+                    <label for="fps">FPS</label>
+                    <input type="checkbox" id="puzzles" name="generos[]" value="puzzles">
+                    <label for="puzzles">Puzzles</label>
+                    <input type="checkbox" id="rpg" name="generos[]" value="rpg">
+                    <label for="rpg">RPG</label>
+                    <input type="checkbox" id="survival_horror" name="generos[]" value="survival_horror">
+                    <label for="survival_horror">Survival Horror</label>
+                    <input type="checkbox" id="terror" name="generos[]" value="terror">
+                    <label for="terror">Terror</label>
+                    <input type="checkbox" id="terror_psicologico" name="generos[]" value="terror_psicologico">
+                    <label for="terror_psicologico">Terror Psicológico</label>
+                    </div>
+                </li><hr/>
+                <li>
+                    <button type="submit">Agregar juego</button>
+                </li>
+            </ul>         
+        </form>
+    </div>
+    
+    <footer>Axel Fiol / Alfredo Moracho - Seminario PHP 2023</footer>
+</body>
+</html>
